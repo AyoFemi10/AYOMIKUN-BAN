@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYOMIKUN BAN SITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="blood" id="blood1"></div>
+    <div class="blood" id="blood2"></div>
+    <div class="blood" id="blood3"></div>
+    <div class="blood" id="blood4"></div>
+    
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-skull skull-icon"></i> AYOMIKUN BAN SITE <i class="fas fa-skull skull-icon"></i></h1>
+            <div class="subtitle">WhatsApp Account Control Center</div>
+        </header>
+        
+        <div class="scary-message">
+            <i class="fas fa-exclamation-triangle"></i> WARNING: This tool provides direct access to WhatsApp's administrative functions. Use with extreme caution. Any misuse may have serious consequences.
+        </div>
+        
+        <div class="buttons-grid">
+            <button class="glow-btn" id="banNumberBtn">
+                <i class="fas fa-ban"></i> BAN A NUMBER
+            </button>
+            
+            <button class="glow-btn" id="unbanNumberBtn">
+                <i class="fas fa-undo"></i> UNBAN A NUMBER
+            </button>
+            
+            <button class="glow-btn" id="banGroupBtn">
+                <i class="fas fa-ban"></i> BAN A GROUP
+            </button>
+            
+            <button class="glow-btn" id="unbanGroupBtn">
+                <i class="fas fa-undo"></i> UNBAN A GROUP
+            </button>
+            
+            <button class="glow-btn" id="banCheckerBtn">
+                <i class="fas fa-search"></i> BAN CHECKER
+            </button>
+            
+            <button class="glow-btn" id="devInfoBtn">
+                <i class="fas fa-code"></i> DEVELOPER INFO
+            </button>
+        </div>
+        
+        <!-- Ban Number Section -->
+        <div class="input-section" id="banNumberSection">
+            <h3><i class="fas fa-ban"></i> BAN WHATSAPP NUMBER</h3>
+            <div class="input-group">
+                <label for="banPhoneNumber">TARGET PHONE NUMBER (International Format)</label>
+                <input type="text" id="banPhoneNumber" placeholder="e.g., +1234567890">
+            </div>
+            <button class="glow-btn" id="generateBanBtn">OPEN EMAIL TO BAN</button>
+            <div class="email-success" id="banEmailSuccess">
+                <i class="fas fa-check-circle"></i> Your email client should open with a pre-filled ban request. Just press send!
+            </div>
+        </div>
+        
+        <!-- Unban Number Section -->
+        <div class="input-section" id="unbanNumberSection">
+            <h3><i class="fas fa-undo"></i> UNBAN WHATSAPP NUMBER</h3>
+            <div class="input-group">
+                <label for="unbanPhoneNumber">TARGET PHONE NUMBER (International Format)</label>
+                <input type="text" id="unbanPhoneNumber" placeholder="e.g., +1234567890">
+            </div>
+            <div class="input-group">
+                <label for="banReason"><i class="fas fa-exclamation-triangle"></i> SELECT BAN REASON</label>
+                <select id="banReason">
+                    <option value="">-- Select Ban Reason --</option>
+                    <option value="unofficial">Using Unofficial WhatsApp App</option>
+                    <option value="spam">Spam/Bulk Messaging</option>
+                    <option value="reports">Multiple User Reports</option>
+                    <option value="automation">Using Automation Tools/Bots</option>
+                    <option value="content">Sharing Inappropriate Content</option>
+                    <option value="suspicious">Suspicious Activity</option>
+                    <option value="unknown">Unknown/No Reason Provided</option>
+                </select>
+            </div>
+            <button class="glow-btn" id="generateUnbanBtn">GENERATE UNBAN REQUEST</button>
+            <div class="email-success" id="unbanEmailSuccess">
+                <i class="fas fa-check-circle"></i> Your email client should open with a pre-filled unban request. Just press send!
+            </div>
+        </div>
+        
+        <!-- Ban Checker Section -->
+        <div class="input-section" id="banCheckerSection">
+            <h3><i class="fas fa-search"></i> CHECK BAN STATUS</h3>
+            <div class="input-group">
+                <label for="checkPhoneNumber">PHONE NUMBER TO CHECK (International Format)</label>
+                <input type="text" id="checkPhoneNumber" placeholder="e.g., +1234567890">
+            </div>
+            <button class="glow-btn" id="checkBanBtn">CHECK STATUS</button>
+            
+            <div class="api-status" id="apiStatus"></div>
+        </div>
+        
+        <!-- Developer Info Section -->
+        <div class="dev-info" id="devInfoSection">
+            <h3><i class="fas fa-code"></i> DEVELOPER INFORMATION</h3>
+            <div class="dev-content">
+                <div class="dev-avatar">
+                    <i class="fas fa-user-ninja"></i>
+                </div>
+                <div class="dev-details">
+                    <div class="dev-name">AYOMIKUN TECHIES</div>
+                    <div class="dev-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>ayomikuntech6@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub: AyoFemi10</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Web Developer & WhatsApp Solutions Expert</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="glow-btn" id="contactMeBtn">
+                            <i class="fas fa-envelope"></i> CONTACT ME
+                        </button>
+                        <button class="glow-btn" id="supportMeBtn">
+                            <i class="fas fa-hands-helping"></i> SUPPORT ME
+                        </button>
+                    </div>
+                    
+                    <!-- Contact Me Sub-buttons -->
+                    <div class="sub-buttons hidden" id="contactButtons">
+                        <button class="mini-glow-btn" id="emailContactBtn">
+                            <i class="fas fa-envelope"></i> EMAIL
+                        </button>
+                        <button class="mini-glow-btn" id="telegramContactBtn">
+                            <i class="fab fa-telegram"></i> TELEGRAM
+                        </button>
+                    </div>
+                    
+                    <!-- Support Me Sub-buttons -->
+                    <div class="support-buttons hidden" id="supportButtons">
+                        <button class="mini-glow-btn" id="githubSupportBtn">
+                            <i class="fab fa-github"></i> GITHUB
+                        </button>
+                        <button class="mini-glow-btn" id="youtubeSupportBtn">
+                            <i class="fab fa-youtube"></i> YOUTUBE
+                        </button>
+                        <button class="mini-glow-btn" id="telegramSupportBtn">
+                            <i class="fab fa-telegram"></i> TELEGRAM CHANNEL
+                        </button>
+                        <button class="mini-glow-btn" id="whatsappSupportBtn">
+                            <i class="fab fa-whatsapp"></i> WHATSAPP CHANNEL
+                        </button>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/AyoFemi10" target="_blank" class="social-btn">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:ayomikuntech6@gmail.com" class="social-btn">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://t.me/mikunistheemperor" target="_blank" class="social-btn">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://youtube.com/@ayomikun-techies?si=ReKfAOvNhV5XotCi" target="_blank" class="social-btn">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="scary-message" style="margin-top: 20px;">
+                <i class="fas fa-exclamation-circle"></i> For technical support, custom development, or API integration services, please contact me.
+            </div>
+        </div>
+        
+        <!-- Result Section -->
+        <div class="result" id="resultSection">
+            <h3><i class="fas fa-file-alt"></i> GENERATED REPORT</h3>
+            <div class="email-template" id="emailTemplate">
+                <!-- Email template will be inserted here by JavaScript -->
+            </div>
+            
+            <div class="instructions">
+                <p><strong>Instructions:</strong></p>
+                <p>1. Copy the text above</p>
+                <p>2. Open your email client</p>
+                <p>3. Send to: support@support.whatsapp.com</p>
+                <p>4. Use the subject line provided in the template</p>
+            </div>
+        </div>
+        
+        <!-- Ban Check Result -->
+        <div class="result" id="banCheckResult">
+            <h3><i class="fas fa-info-circle"></i> BAN STATUS RESULT</h3>
+            <div id="banStatusMessage">
+                <!-- Ban status will be inserted here by JavaScript -->
+            </div>
+        </div>
+
+        <!-- WhatsApp Ban Simulation -->
+        <div class="result" id="whatsappBanSimulation" style="display: none;">
+            <h3><i class="fab fa-whatsapp"></i> WHATSAPP BAN STATUS</h3>
+            <div class="whatsapp-ban-container">
+                <div class="whatsapp-ban-title">This account can no longer use WhatsApp</div>
+                <div class="whatsapp-ban-message">Chats are still on this device</div>
+                <button class="whatsapp-ban-button" id="requestReviewBtn">Request a review</button>
+                <div class="whatsapp-ban-review" id="reviewSection">
+                    <div class="whatsapp-ban-review-text">
+                        WhatsApp Support will review your account and device info to check for activity that does not follow our terms of service.
+                        <br><br>
+                        <strong>Banned by AYOMIKUN TECHIES</strong>
+                    </div>
+                    <button class="whatsapp-ban-submit" id="submitReviewBtn">Submit</button>
+                </div>
+                <div class="whatsapp-ban-status" id="reviewStatus">
+                    Your request has been submitted. Reviews typically take 24 hours. We will notify you in WhatsApp. Chats are still on this device.
+                </div>
+            </div>
+            <div class="scary-message" style="margin-top: 20px;">
+                <i class="fas fa-exclamation-circle"></i> Note: This is a demonstration of WhatsApp's ban interface for educational purposes.
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>AYOMIKUN BAN SITE &copy; 2025 | POWERED BY AYOMIKUN TECHIES</p>
+        <div class="footer-info">
+            <p>Contact: ayomikuntech6@gmail.com | GitHub: AyoFemi10</p>
+            <p>Telegram: @mikunistheemperor | YouTube: @ayomikun-techies</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
